@@ -37,11 +37,21 @@ GCP offers bunch of pre-trained models as well as AUTO ML capabilities for diffe
 - **object tracking**: track multiple objects in shots and segments
 ### Video intellegence API
 - identifies vast number of object,places & actions in stored as well as **streaming videos**
-- explicit content detection, recognizing logos ,text,transcribing videos
+- **Label detection**: it does label detection in two ways.
+  -	**At video level**: what is this video about 
+  -	**At frame level**: what happening in every scene of video 
+-	**Shot change detection**: if video changes from landscape pan to closeup it will detect that & give you timestamps for that
+-	**Explicit content detection**: identify inappropriate scene from video 
+-	**Object detection and tracking**: ex tracking a car in video. It will give you all timeframe where car is present 
+-	**Person detection with pose estimation**
+-	All other service which are present in Vision API is also available here.
+-	We can also mention region where model should run. Benefits from low latency.
+
 
 # Text
 ### AutoML Natural Language & Natural Language API
-- it can classify documents , entity extraction & sentiment analysis. all those features basic available in cloud Natural Language API. 
+- it can classify documents(700 categories supported), entity extraction, sentiment analysis (can be detected at entity level) & analyzing text (Dependency parsing,Parsed label,POS tagging,Lemma,Morphology)
+. all those features basic available in cloud Natural Language API. 
 - AUTO ML lets you customize classification categories, entities, and sentiment scores that are relevant to your application
 ### Healthcare Natural Language
 - **Healthcare Natural Language API** :
