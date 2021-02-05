@@ -8,7 +8,7 @@ GCP offers bunch of pre-trained models as well as AUTO ML capabilities for diffe
 | --- | --- | --- |
 | Images | AutoML Vision | Vision API |
 | Video | AutoML Video Intelligence | Video Intelligence API |
-| Language: semantic analysis	 | AutoML Natural Language | Natural Language API & Healthcare Natural Language AI |
+| Language: semantic analysis	 | AutoML Natural Language | Natural Language API & Healthcare Natural Language API |
 | Language: translation	 | AutoML Translation	 | Translation API Basic & Translation API Advanced |
 | Chatbot	 | 	 | Dialogflow |
 | Speech	 | 	 | Cloud Text-to-Speech API, Cloud Speech-to-Text API	 |
@@ -30,3 +30,23 @@ GCP offers bunch of pre-trained models as well as AUTO ML capabilities for diffe
 - **celebrity recognition**: Identify celebrity faces in images
 - **AUTO ML edge**: allows you to train and deploy low-latency, high accuracy models optimized for edge devices. to build application on iOS or Android devices use AutoML Vision Edge in ML Kit
 - **object localization** : detects multiple objects in an image & gives coordinates
+
+# Video 
+### AutoML Video
+- **classification** : to classify shots and segments in the video
+- **object tracking**: track multiple objects in shots and segments
+### Video intellegence API
+- identifies vast number of object,places & actions in stored as well as **streaming videos**
+- explicit content detection, recognizing logos ,text,transcribing videos
+
+# Text
+### AutoML Natural Language & Natural Language API
+- it can classify documents , entity extraction & sentiment analysis. all those features basic available in cloud Natural Language API. 
+- AUTO ML lets you customize classification categories, entities, and sentiment scores that are relevant to your application
+### Healthcare Natural Language
+- **Healthcare Natural Language API** :
+  - Extract information about medical concepts like diseases, medications, medical devices, procedures, and their clinically relevant attributes
+  - Map medical concepts to standard medical vocabularies such as RxNorm, ICD-10, and MeSH
+- **AutoML Entity Extraction for Healthcare** : specifically desinged for healthcare entity extraction
+
+
