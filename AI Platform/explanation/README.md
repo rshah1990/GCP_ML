@@ -8,6 +8,9 @@
 # Methods
 
 - AI explanation offers two method. **Both methods are based on concept of SHAP values**.
+- - XRAI -> images (XRAI is based on Integrated Gradients and also can’t be used on non-differentiable models)
+  - Integrated gradients -> everything else that’s differentiable. 
+  - Sampled Shapley -> only for ensembles and other non-differentiable models
 
 ## Sampled shapely
 - For non-differentiable models such as ensemble models of tree
