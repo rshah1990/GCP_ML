@@ -3,16 +3,41 @@
 - Built-in Algoriths covers gap between AUTO ML and full custom model. 
 - you can select sepcific algorithm to train, it can also handle pre-processing , can do hyperparameter tuning & train model for you. 
 
+# supported algorithm
+
+| Algorithm  | Supported accelerators for training | Type of problem |
+| ------------- | ------------- |------------- |
+| Linear learner  | Classification, regression | GPU|
+| Wide and deep | Classification, regression, ranking	| GPU|
+| TabNet | Classification, regression	| GPU|
+| XGBoost | Classification, regression		| None (Only CPU) [they have distributed XGboost]|
+| Image classification | Classification	| GPU, TPU|
+| Object detection | Detecting objects within complex image scenes| GPU, TPU|
+
 # How to use it (XG boost)
 
-## step 1 : select algorithm
+## Step 1 : select algorithm
+
+![Screenshot](build-in-images/step-1.PNG)
 
 ## Step 2 : enable or disable automatic pre-processing 
+- if data is already pre-processed , disable this option in this case you have to provide seperate validation/Test set file.
+- if its enabled you can define percentage of the data to use as validation/test set. 
+- file is expected to be in sepcific format 
+
+![Screenshot](build-in-images/step-2.PNG)
 
 ## Step 3: define train, validation & test set 
+![Screenshot](build-in-images/step-3.PNG)
 
-## step 4: Define algorithm arguments like objective function , eval matrics 
+## Step 4: Define algorithm arguments like objective function , eval matrics 
+![Screenshot](build-in-images/step-4.PNG)
 
-## Step5: Hyperparameter tuning, define range of hyperparameter using hypertune. you can also define early stopping , max trials, no of parallel trails & objective function (Like minimize rmse)
+## Step 5: Hyperparameter tuning, select hypertune option to define range of parameter for hypertune to try
+![Screenshot](build-in-images/step-5.PNG)
 
-## step 6: Define region & scale tier, submit
+## Step-6: define early stopping , max trials, no of parallel trails & objective function (Like minimize rmse)
+![Screenshot](build-in-images/step-6.PNG)
+
+## Step 7: Define region & scale tier, submit
+![Screenshot](build-in-images/step-7.PNG)
