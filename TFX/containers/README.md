@@ -2,13 +2,12 @@
 
 - Historically to deploy solution we use to have dedicated servers which means waste of resources, scaling was difficult, not portable. For ex: database will be deployed on one VM, when queries are not running or partially used the resources are wasted.
 
-![Screenshot](container_images/history.png)
+<img src="container_images/history.png" width="200">
 - **Virtualization**: run multiple virtual serves on same physical computer. Hypervisor is software layer which breaks dependencies OS with hardware so that multiple virtual machine to share same hardware. Disadvantages of the historic system has been removed but still application is tightly coupled with application and its dependencies.
 
-![Screenshot](container_images/virtualization.png)
+<img src="container_images/virtualization.png" width="200">
 - To resolve issue of dependency problem is to abstract at user space level which is nothing but containers. **Containers are isolated user spaces to run application code**.
-
-![Screenshot](container_images/containers.png)
+<img src="container_images/containers.png" width="200">
 
 ## Images
 - Application & its dependencies are called Images 
@@ -24,13 +23,11 @@
   - Cgroups restricts max CPU utilization memory & IO bandwidth 
   - Union file system to encapsulate application and its dependencies 
 - Container image is structured in layers. **Docker file is nothing but set of instruction to create layer in the image. Each layer is read only. It will also have writeable ephemeral top layer also called as container layer.**
-
-![Screenshot](container_images/layers.png) 
-
+<img src="container_images/layers.png" width="400">
 - When you want to store data permanently than we have to do somewhere else
 - Since all container has their own storage, they can all access to common base layer.
-
-![Screenshot](container_images/common_base.png)
+<img src="container_images/common_base.png" width="400">
 - Container registry by google called gcr.io. contains public open source images. Others are docker hub, GitHub
 - **We can build own container using open source docker command, google has cloud build for that.**
-![Screenshot](container_images/cloud_build.png)
+<img src="container_images/cloud_build.png" width="500">
+
