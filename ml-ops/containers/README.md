@@ -54,3 +54,27 @@
   - **Auto repair**: VM that hosts your containers inside GKE cluster called nodes. Repair unhealthy nodes.
   - **Cluster scaling**: as kubernetes supports scaling of workloads, GKE supports scaling of cluster
   - Dashboard to view and manage the nodes
+  
+## How kubernetes works
+- **Kubernetes object model**: Each thing is represented as an object 
+<img src="container_images/kubernetes.png" width="300">
+
+- **Declarative management**: declare state of the object. Its kubernetes job to maintain object in that state
+
+## Pods & Nodes
+- Pods are basic building block.They are the smallest deployable object & not the containers.
+- Pod is nothing but environment where container runs, one pod can have one or more containers
+- Pods runs on nodes. Nodes is worker machine in kubernetes (VM in cluster)
+- Containers within pods are tightly coupled. They share resources like IP address & storage, they can communicate internally using local host
+
+<img src="container_images/pods.png" width="300"> <img src="container_images/nodes.svg" width="300">
+
+## Kubernetes components 
+
+<img src="container_images/kubelet.png" width="300"> 
+
+- Job of nodes is to run pods and job of master is to coordinate
+- **kubeAPIserver** is component we will interact with using **kubectl**, it will view or change state of the cluster including launching pods
+- **etcd**: clusters database, stores state of the cluster, what pods and where it should be running.
+- **Kubelet** is the kubernetes agent on each node. When kube API wants to start node on the POD it will connect with kubelet
+- GKE manages all the control pane. GKE is more about nodes. if we are using just kubernetes and not GKE, cluster admin has to create nodes & add them to kubernetes.
