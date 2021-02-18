@@ -34,3 +34,61 @@
   -	We can cluster on multiple columns ex: store & product but order is really important (CLUSTER BY STORE, PRODUCT). In this case if user filter by STORE/ STORE+ PRODDUCT clustering will help but if user only filters by PRODUCT clustering won’t work
 
 # ML with big query 
+
+- **Train model**:
+  
+  CREATE MODEL `model name` \
+  OPTIONS \
+  (MODEL_TYPE=` `, INPUT_LABLE_COL = [‘Target col’]) \
+  AS \
+  (SELECT * FROM TABLE)
+ 
+- **Training Metrics**: Click on model --> evaluation tab 
+- **Evaluate on new data**: In background, bq has already splitted data in train/test set, when we run this query it returns test set results
+
+  SELECT * FROM \
+  ML.EVALUATE \
+  (MODEL `model name`, \
+  SELECT * FROM TABLE)
+  
+- **Predict on new data**:
+ 
+  SELECT * FROM \
+  ML.PREDICT \
+  (MODEL `model name`, \
+  SELECT * FROM TABLE)
+
+- **Model deployment**:
+  - **Data pre-processing/Feature creation is a part of code. Input features should be exactly same of data in table**
+  - **deploy in local**:
+       - Export model file in google cloud storage
+       - All TensorFlow based model will be exported as TensorFlow Saved Model
+       - AUTOML will be exported as container
+       - XG Boost will be deployed as custom prediction routine. We can download and edit those files in Python as well
+  - **deploy on cloud**:
+       - Export model to google cloud storage
+       - Use AI platform to deploy model for online prediction
+       - AUTOML models does not supports this
+
+- **Supported Model Type**:
+    1.	Linear Regression 
+    2.	Binary logistic regression 
+    3.	Multi class logistic regression
+    4.	K-means clustering 
+    5.	Matrix factorization for recommendation system 
+    6.	Time series 
+    7.	Boosted tree
+    8.	DNN
+    9.	AUTOML tables 
+    10.	Import previously trained TensorFlow models 
+
+# Limitation:
+- Can only export to cloud storage 
+- Can only export up to 1GB per file, but can be split to multiple files using wild card 
+(bq extract ‘projectid.dataset.table’ ‘gs://my-bucket/file-name-*.json)
+- Load multiple files using command line and not from UI
+- Limited to 1000 table per dataset
+
+ 
+
+
