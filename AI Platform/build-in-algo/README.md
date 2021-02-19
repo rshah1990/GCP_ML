@@ -1,7 +1,14 @@
-# built-in algorithms
+# Built-in algorithms
 
-- Built-in Algoriths covers gap between AUTO ML and full custom model. 
+- Built-in algorithms covers gap between AUTO ML and full custom model. 
 - you can select sepcific algorithm to train, it can also handle pre-processing , can do hyperparameter tuning & train model for you. 
+
+# Limitation
+- Distributed training is not supported. To run a distributed training job on AI Platform Training, you must create a training application
+- GPUs are supported for some algorithms
+- Multi-GPU machines do not yield greater speed with built-in algorithm training. If you're using GPUs, select machines with a single GPU
+- TPUs are not supported for tabular built-in algorithm training
+
 
 # supported algorithm
 
