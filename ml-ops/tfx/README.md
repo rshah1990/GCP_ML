@@ -57,4 +57,12 @@
     
   ### **Tuner**:
     - uses python keras tuner API for hyperparameter tuning 
+    - can use cloud AI platform optimizer for distributed tuning 
     
+  ### **Evaluator**:
+    - uses tensorflow model evaluation llibrary across split & slices
+    - validate model performance to flag if its good enough for production 
+    - as an output it dumps model evaluation metrics & model blessing (ready for production)
+   
+  ### **InfraValidator**:
+    - it will validate model 
