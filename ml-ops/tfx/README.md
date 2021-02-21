@@ -1,6 +1,6 @@
 # Architecture 
 
-<Image>
+<img src="tfx images/architecture.PNG">
 
 - TFX is production pipeline ML framework based on tensorflow
 - TFX pipeline is sequence of components connected by channels in DAG of artifactes dependencies
@@ -12,6 +12,8 @@
 
 # How it works
 
+<img src="tfx images/works.PNG" width="200">
+
 - Each step of TFX pipeline (components) produces and consumes artifactes. this is how two components communicates in pipeline.
 - each TFX components has five elements 
   - **Config file**: run time parameters & input/output artifactes
@@ -22,6 +24,8 @@
   
   
   # TFX components
+  
+  <img src="tfx images/components.PNG" >
   
   ### **ExampleGen**: 
   - data ingestion pipeline,usually first component of pipeline
@@ -65,4 +69,21 @@
     - as an output it dumps model evaluation metrics & model blessing (ready for production)
    
   ### **InfraValidator**:
-    - it will validate model 
+    - it will validate model & validate that model is mechanically fine to push to production 
+    - it takes input as model & example from exampleGen and validates if model binaries can be loaded 
+
+  ### **Pusher**:
+    - push validated model to deplyment target 
+    - takes blessing from evaluator & infra validator before pushing model to production
+
+  ### **BulkInfer**:
+    - batch inference on unlabelled TFX examples 
+    - can be used to infer model in-memory or on Cloud AI platform
+
+  ### **Pipeline Nodes**:
+    - pipeline nodes can be used to perform advance metadata operation such as importing external artifactes or performing query on current metadata
+    - most common pipeline node is **Import Node**, imports external metadata to ML metadata 
+    - **ResolverNode** performs metadata query
+    - **LatestArtifact resolver** to get latest artifactes
+    - **Latestblessedmodelresolver** returns latest blessed model 
+ 
