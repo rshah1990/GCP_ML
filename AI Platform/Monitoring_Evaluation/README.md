@@ -40,3 +40,10 @@
   - Bounding box key
 - When Data Labeling Service runs an evaluation job, it produces a set of evaluation metrics that vary depending on the specifics of your machine learning model
 - you can also Compare mean average precision across models
+
+
+# Issues while using Deep learning VM
+
+- Quota exceeded: not enough GPU/TPU quota, request for quota increase
+- Resource not found : trying to use GPU in region where GPU is not available 
+- Preemptible instances:  can't create preemptible instance from the UI, even though you have quota. use command line argument
