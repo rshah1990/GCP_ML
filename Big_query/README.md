@@ -81,6 +81,14 @@
     8.	DNN
     9.	AUTOML tables 
     10.	Import previously trained TensorFlow models 
+ 
+- **Regularization**: big query supports early stopping & L1/L2 regularization to prevent overfitting 
+- **Pre-processing**: big query supports two kind of pre-processing 
+   - Automatic preprocessing: it performs basic pre-processing like one-hot encoding & normalization
+   - Manual preprocessing: is needed for custom preprocessing like bucketization & feature crosses  
+    
+    SELECT
+    ML.FEATURE_CROSS(STRUCT('a' AS f1, 'b' AS f2, 'c' AS f3)) AS output;
 
 # Limitation:
 - Can only export to cloud storage 
