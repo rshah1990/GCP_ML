@@ -10,6 +10,8 @@
 
 <img src="DS images/confusion matrix.png" width="400">
 
+**Note: TPR == Recall == Sensitivity**
+
 - **Precision** : summarizes the fraction of examples assigned the positive class that belong to the positive class.
 
                 TruePositive / (TruePositive + FalsePositive)
