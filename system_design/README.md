@@ -35,3 +35,19 @@
   - static vs dynamic serving decision can be taken using peakness & cardinality.
   - Peakness refers to the how concentrated prediction distribution is ex: next word prediction model is highly peaked since small amount of words represents majority predictions. 
   - Cardinality: refers to the number of values in the set for which we have to make prediction for. ex: customer life time value will have high cardinality since number of users can be really large
+
+# Performance decision
+
+- your training code could be I/O bound , CPU bound or memory bound
+
+![performance bound](https://user-images.githubusercontent.com/37735152/110787256-235c7f80-8293-11eb-8524-4c1536221dc9.PNG)
+
+- Inference performance:
+  - batch prediction: consideration is very similar to training 
+      - time
+      - cost (how much you can precompute & store) 
+      - scale (single worker or multiple worker, what sort of hardware we have to use & cost assciated with that)
+  - Online prediction
+    - cant distribute the workload have to use single machine for single user 
+    - we can always use different machine for different user. horizontal scaling of REST API using kubernetes (Cloud ML enginer)
+    - metric to measure is QPS (query per performance)
