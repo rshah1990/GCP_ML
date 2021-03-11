@@ -52,6 +52,7 @@
     - we can always use different machine for different user. horizontal scaling of REST API using kubernetes (Cloud ML enginer)
     - metric to measure is QPS (query per performance)
   - Hybride approach: some of data point is precomputed and store for ex for recommendation system top 20% of users output is precomputed and stored. trade-off is cost vs time
+  - Mini batching
 
 
 # Distributed training
@@ -66,3 +67,13 @@
       | use when many low power & unreliable worker | Content Cell Multiple device on one host or fast device with strong network links |
       | more mature approach | TPU uses this approach out of the box |
       | if your model is I/O bound | if your model is compute bound |
+   
+# Faster input pipeline
+
+- Reading data 
+
+| Method | Speed | Complexity |
+| ------------- | ------------- |------------- |
+| Python | slowest  |easiest support pandas and numpy |
+| tensorflow native ops | Medium |Medium |
+| TF Records | Fastest |complex since data needs to be converted into TF records |
