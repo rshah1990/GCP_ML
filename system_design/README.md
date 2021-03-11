@@ -51,3 +51,18 @@
     - cant distribute the workload have to use single machine for single user 
     - we can always use different machine for different user. horizontal scaling of REST API using kubernetes (Cloud ML enginer)
     - metric to measure is QPS (query per performance)
+  - Hybride approach: some of data point is precomputed and store for ex for recommendation system top 20% of users output is precomputed and stored. trade-off is cost vs time
+
+
+# Distributed training
+
+- Tensorflow automatically handels multi-core CPU. to speed up training we can add GPU/TPU
+- we can go from accelarator to multiple on same device or multiple workers with multiple accelerators
+- distribution can be done in two ways 
+  - Data Parallelism: train same model on different device with different dataset
+    - | Parameter server  | Sync allreduce |
+      | ------------- | ------------- |
+      | Asynchronous  | synchronous  |
+      | use when many low power & unreliable worker | Content Cell Multiple device on one host or fast device with strong network links |
+      | more mature approach | TPU uses this approach out of the box |
+      | if your model is I/O bound | if your model is compute bound |
