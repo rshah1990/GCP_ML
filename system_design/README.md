@@ -67,7 +67,8 @@
       | use when many low power & unreliable worker | Content Cell Multiple device on one host or fast device with strong network links |
       | more mature approach | TPU uses this approach out of the box |
       | if your model is I/O bound | if your model is compute bound |
-   
+ 
+
 # Faster input pipeline
 
 - Reading data 
@@ -77,3 +78,11 @@
 | Python | slowest  |easiest support pandas and numpy |
 | tensorflow native ops | Medium |Medium |
 | TF Records | Fastest |complex since data needs to be converted into TF records |
+
+ # Optimzing Tensorflow for mobile
+ 
+ - Tensorflow supports multiple mobile platform. Andriod, IOS & Raspberry PI
+ - there are serveral method to reduce model size 
+  - Freeze graph: its load time optimization. converts varilable nodes to constants nodes & remove checkpoints. disadvantage of this is that cant do continous training .
+  - Transform the graph: transform the graph to remove nodes which wont be used during inference like batch normalization & dropout, remove debug nodes, merge two ops into one ops (fold batch norm)
+  - Quantization weights & calculation: if you quantize the weights accuracy of model will reduce. its converts float to 8 bit integer value with certain techniques
