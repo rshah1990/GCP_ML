@@ -47,6 +47,7 @@
 
   ### **ExampleValidator**: 
     - detects anomalies in data, train-serve skew & data drift based on the expectations defined by the schema
+    - creates anomaly report as an output
     
   ### **Transform**: 
     - does feature engineering for both training & serving 
