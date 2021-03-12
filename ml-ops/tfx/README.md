@@ -59,6 +59,7 @@
     - takes input of schemagen , transformed graph , training parameters & user define code 
     - trainer artifcates can be analyzed using tensorboard
     - dumps one model in tensorflow saved model format & another model for evaluation which will be used by evaluator component 
+    - evaluator will be used by TF model analysis library to analyze model on different slices
     
   ### **Tuner**:
     - uses python keras tuner API for hyperparameter tuning 
