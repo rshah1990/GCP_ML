@@ -71,3 +71,12 @@
     - use description file to load component into pipeline
     
     <img src="kubeflow/step4.PNG" width="400">
+    
+  # Compile & Run
+  
+ - build & push all containers required for run to container registry
+ - build & push base container used by custom components to container registry
+ - compile kubeflow pipeline. dsl-compile commmand python code to YAML file
+   dsl-compile --py pipeline.py --output pipeline.yaml
+ - upload pipeline to KF cluster using kfp pipeline upload command 
+   kfp --endpoint $ENDPOINT pipeline upload -p $PIPELINE_NAME pipeline.YAML
