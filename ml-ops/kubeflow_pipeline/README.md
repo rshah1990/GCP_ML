@@ -72,7 +72,7 @@
     
     <img src="kubeflow/step4.PNG" width="400">
     
-  # Compile & Run
+ # Compile & Run
   
  - build & push all containers required for run to container registry
  - build & push base container used by custom components to container registry
@@ -80,3 +80,11 @@
    dsl-compile --py pipeline.py --output pipeline.yaml
  - upload pipeline to KF cluster using kfp pipeline upload command 
    kfp --endpoint $ENDPOINT pipeline upload -p $PIPELINE_NAME pipeline.YAML
+   
+ # Kubeflow metadata
+ 
+ - metadata means information about executions (runs), models, datasets, and other artifacts
+ - **DataSet** to capture metadata for a dataset that forms the input into or the output of a component in your workflow
+ - **Execution** to capture metadata for an execution (run) of your ML workflow.
+ - **Metrics** to capture metadata for the metrics used to evaluate an ML model.
+ - **Model** to capture metadata for an ML model that your workflow produces
