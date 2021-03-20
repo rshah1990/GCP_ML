@@ -9,4 +9,4 @@
 | Returns as soon as possible. | Asynchronous request. |
 | Runs models deployed to AI Platform Prediction.| Runs models deployed to AI Platform Prediction or models stored in accessible Google Cloud Storage locations. |
 | resource is allocated all the time.| allocates resource when request is sent |
-|{"image": [0.0, 0.0, ... ], "key": 0} /n {"image": [0.0, 0.0, ... ], "key": 1} /n  {"image": [0.0, 0.0, ... ], "key": 2}| {"instances": [{"values": [1, 2, 3, 4], "key": 1}]}|
+| {"instances": [{"values": [1, 2, 3, 4], "key": 1}]} |  {"image": [0.0, 0.0, ... ], "key": 0} </br> {"image": [0.0, 0.0, ... ], "key": 1} </br>  {"image": [0.0, 0.0, ... ], "key": 2}|
