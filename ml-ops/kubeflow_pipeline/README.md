@@ -88,3 +88,4 @@
  - **Execution** to capture metadata for an execution (run) of your ML workflow.
  - **Metrics** to capture metadata for the metrics used to evaluate an ML model.
  - **Model** to capture metadata for an ML model that your workflow produces
+ - ex: https://github.com/kubeflow/metadata/blob/master/sdk/python/sample/demo.ipynb
