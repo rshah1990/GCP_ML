@@ -60,3 +60,33 @@ GCP offers bunch of pre-trained models as well as AUTO ML capabilities for diffe
 - **AutoML Entity Extraction for Healthcare** : specifically desinged for healthcare entity extraction
 
 
+# Recommendation AI
+
+### Steps to implement recommendation AI
+- Import product catalog 
+- Record user event 
+- Determine recommendation Type & Placements
+
+| Recommendation types	 | optimization objective | Available customizations|
+| --- | --- | --- |
+| Others You May Like | click-through rate | Change optimization objective to conversion rate </br> Add price reranking </br> Add diversification (supported but not recommended)|
+| Frequently Bought Together  | revenue per order | Add diversification |
+| Recommended for You  | click-through rate | Change optimization objective to conversion rate </br> Add price reranking </br> Add diversification |
+| Recently Viewed  |  | It is not recommendation just user history |
+
+### Optimization objectives
+
+- Click-through rate (CTR): Optimizing for CTR emphasizes engagement; you should optimize for CTR when you want to maximize the likelihood that the user interacts with the recommendation.
+- Revenue per order : The revenue per order optimization objective
+- Conversion rate (CVR) : Optimizing for conversion rate maximizes the likelihood that the user adds the recommended item to their cart
+
+### Advance options
+
+- Diversification : If you want to ensure that results returned from a single prediction request are from different categories of your product catalog, you can enable diversification.Diversification reduces the likelihood that similar catalog items are shown in the recommendation panel, at the risk of removing some good recommendations.
+- Price reranking: Price reranking causes recommended catalog items with a similar recommendation probability to be ordered by price, with the highest- priced items first.
+- Results filtering : You can filter the prediction results for a placement by the tag value you provided with the catalog item and by whether the item is in stock
+- Available placements: review statistics about where recommendations appear.
+
+
+
+
