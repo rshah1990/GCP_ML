@@ -77,7 +77,7 @@ GCP offers bunch of pre-trained models as well as AUTO ML capabilities for diffe
 ### Optimization objectives
 
 - Click-through rate (CTR): Optimizing for CTR emphasizes engagement; you should optimize for CTR when you want to maximize the likelihood that the user interacts with the recommendation.
-- Revenue per order : The revenue per order optimization objective
+- Revenue per order : The revenue per order optimization objective is the default optimization objective for the "Frequently Bought Together" recommendation model type 
 - Conversion rate (CVR) : Optimizing for conversion rate maximizes the likelihood that the user adds the recommended item to their cart
 
 ### Advance options
