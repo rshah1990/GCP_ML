@@ -3,7 +3,7 @@
 - Explanation (feature attribution) for each and every prediction helps you to understand model output for classification and regression
 - Available for tabular data as well as image data 
 - **Limitation: only supports model trained on TensorFlow 1.x if you are using keras than have to convert into estimators using model to estimator utility** 
-  - tf.keras.estimator.model_to_estimator(keras_model=estimator_model)
+  - tf.keras.estimator.model_to_estimator(keras_model=estimator_model) [Now it supports tensorflow 2.0]
   
 # Methods
 
