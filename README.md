@@ -39,3 +39,24 @@ My notes used in preparing Google Professional Machine Learning Engineer Exam. I
 - [Distributed hyperparameter tuning on AI platform with code](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/hyperparameter-tuning)
 - [Kubeflow Pipeline](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/kubeflow_pipeline)
 - [TFX](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/tfx)
+
+## System design
+
+- [Consideration during ML system design](https://github.com/rshah1990/GCP_ML/tree/main/system_design)
+  - Component of ML system
+  - Design decision
+  - Performance decision
+  - Distributed training
+  - Faster input pipeline
+  - Optimzing Tensorflow for mobile
+
+## TensorFlow
+
+- [Tensorflow Transform](https://github.com/rshah1990/Tensorflow/tree/main/Transform)
+- [Wide and Deep model for structure data](https://github.com/rshah1990/Tensorflow/tree/main/structure_data)
+  - Dataset API
+  - Distributed Strategy
+  - Tensorflow Profiler
+  - Wide and Deep model
+  - Feature crossing
+- [Tensorflow Serving with code](https://github.com/rshah1990/Tensorflow/tree/main/tensorflow_serving)
