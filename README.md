@@ -16,6 +16,7 @@ My notes used in preparing Google Professional Machine Learning Engineer Exam. I
 - AI Platform Prediction 
   - [Online versus batch prediction](https://github.com/rshah1990/GCP_ML/tree/main/AI%20Platform/predictions)
   - [Custom Prediction Routine with Code](https://github.com/rshah1990/GCP_ML/tree/main/AI%20Platform/predictions/custom_prediction_routine)
+- [What-If tool with titanic dataset](https://github.com/rshah1990/Python/tree/master/Model%20explanation/What-If%20tool%20Titanic%20dataset)
 
 
 ## Pre-Trained models 
