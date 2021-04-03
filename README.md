@@ -2,6 +2,9 @@
 
 My notes used in preparing Google Professional Machine Learning Engineer Exam. I have the Google Cloud Professional Machine Learning Engineer certification now! 🏆
 
+![161738505217](https://user-images.githubusercontent.com/37735152/113469877-b772ce80-946e-11eb-9108-ca0b6e039c9f.png)
+
+
 [Here is my Certificate](https://www.credential.net/2e923cd0-dea6-46ef-8db1-402aaaa69d64?key=ebc95ea03d3207f53b0ef127d8f9a40287cb64fd3f24f696f6beaaf02a6d825e)
 
 ## AI platform
