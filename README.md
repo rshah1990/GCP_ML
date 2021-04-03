@@ -13,3 +13,29 @@ My notes used in preparing Google Professional Machine Learning Engineer Exam. I
 - AI Platform Prediction 
   - [Online versus batch prediction](https://github.com/rshah1990/GCP_ML/tree/main/AI%20Platform/predictions)
   - [Custom Prediction Routine with Code](https://github.com/rshah1990/GCP_ML/tree/main/AI%20Platform/predictions/custom_prediction_routine)
+
+
+## Pre-Trained models 
+
+- [Auto ML & ML APIs](https://github.com/rshah1990/GCP_ML/tree/main/AUTOML_ML_API)
+  - AUTO ML 
+  - Image 
+  - Video
+  - Text
+  - Recommendation AI
+
+## Big Query 
+
+- [Basics of Big Query & BQML](https://github.com/rshah1990/GCP_ML/tree/main/Big_query)
+
+## DS Concepts
+
+- [Loss Functions](https://github.com/rshah1990/GCP_ML/blob/main/DS_Concepts/loss_functions.md)
+- [Performance Matrix for Binary classification](https://github.com/rshah1990/GCP_ML/blob/main/DS_Concepts/performance_matrix.md)
+
+## ML-ops
+
+- [Conatiners Basics](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/containers)
+- [Distributed hyperparameter tuning on AI platform with code](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/hyperparameter-tuning)
+- [Kubeflow Pipeline](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/kubeflow_pipeline)
+- [TFX](https://github.com/rshah1990/GCP_ML/tree/main/ml-ops/tfx)
